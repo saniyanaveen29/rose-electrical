@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: #14233c;
+}
+
+header {
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 3;
+    border-bottom: 1px solid #e7edf5;
+}
+
+.brand {
+    color: #071b43;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.brand small {
+    display: block;
+    font-size: 10px;
+    color: #7a879b;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #45536c;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 75px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(115deg, #071b43, #164780);
+    color: white;
+    min-height: 430px;
+}
+
+.hero small,
+section small {
+    letter-spacing: 2px;
+    color: #e8bd58;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font: clamp(42px, 6vw, 66px) 'Playfair Display', serif;
+}
+
+.hero em {
+    color: #f0ca70;
+    font-style: normal;
+}
+
+.hero p {
+    color: #d5dfef;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    background: #e8bd58;
+    color: #071b43;
+    padding: 14px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.circle {
+    border: 1px solid #ffffff45;
+    border-radius: 50%;
+    width: 210px;
+    height: 210px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-size: 55px;
+    color: #e8bd58;
+    animation: float 3s infinite;
+}
+
+.circle p {
+    font-size: 14px;
+    color: white;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.brands {
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.brands small {
+    color: #77849a;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px;
+}
+
+.marquee span {
+    display: inline-block;
+    font: 700 22px 'Playfair Display';
+    color: #9aa5b8;
+    animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.products {
+    padding: 65px 8%;
+}
+
+.products h2,
+.about h2,
+.contact h2 {
+    font: 35px 'Playfair Display';
+}
+
+.products > p {
+    color: #65728a;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.tab {
+    padding: 10px 16px;
+    border: 1px solid #dce3ef;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.tab.active,
+.tab:hover {
+    background: #071b43;
+    color: white;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #e6ebf3;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px #10204015;
+}
+
+.pic {
+    height: 180px;
+    background: #f1f5fa;
+    display: grid;
+    place-items: center;
+    font-size: 65px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.info {
+    padding: 18px;
+}
+
+.info h3 {
+    color: #071b43;
+}
+
+.info p {
+    color: #65728a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.info b {
+    font-size: 12px;
+    color: #52617b;
+}
+
+.about {
+    background: #f6f8fc;
+    padding: 65px 12%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.about > div {
+    background: #071b43;
+    color: #e8bd58;
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+.about p,
+.contact p {
+    line-height: 1.8;
+    color: #65728a;
+}
+
+.contact {
+    background: #071b43;
+    color: white;
+    padding: 50px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact p {
+    color: #c6d3e7;
+}
+
+.white {
+    background: white;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #8290a5;
+}
+
+.detail {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.back {
+    color: #123b78;
+    text-decoration: none;
+}
+
+.detailbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 25px;
+    padding: 30px;
+    border: 1px solid #e6ebf3;
+    border-radius: 15px;
+}
+
+.detailpic {
+    min-height: 330px;
+    background: #f1f5fa;
+    display: grid;
+    place-items: center;
+    font-size: 110px;
+}
+
+.detailpic img {
+    width: 100%;
+    height: 330px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.detailbox h1 {
+    font: 40px 'Playfair Display';
+    color: #071b43;
+}
+
+.detailbox p {
+    line-height: 1.7;
+    color: #65728a;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    color: #123b78;
+}
+
+.chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.chips span {
+    padding: 7px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.call {
+    display: inline-block;
+    background: #071b43;
+    color: white;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+@media(max-width:700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    .hero {
+        display: block;
+        padding: 50px 7%;
+    }
+
+    .circle {
+        margin: 30px auto;
+    }
+
+    .products {
+        padding: 50px 6%;
+    }
+
+    #grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        padding: 45px 7%;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .detailbox {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+}
+
+@media(max-width:450px) {
+    #grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
